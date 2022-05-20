@@ -23,6 +23,7 @@ while True:
     oude = ""
     with open('/tmp/.homescreenskilldata/page.txt') as f:
         file = f.read()
+        os.system("echo " + file + " > /tmp/test.txt")
         if (file == "\n"):
             oude = "homescreen"
             os.system("echo \"homescreen\" > /tmp/.homescreenskilldata/page.txt")
