@@ -24,7 +24,7 @@ while True:
     with open('/tmp/.homescreenskilldata/page.txt') as f:
         file = f.read()
         os.system("echo " + file + " > /tmp/test.txt")
-        if (file == "\n"):
+        if (file == ""):
             oude = "homescreen"
             os.system("echo \"homescreen\" > /tmp/.homescreenskilldata/page.txt")
             driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/homescreen.html")
@@ -34,6 +34,12 @@ while True:
         if(file == "clock" and oude != "clock"):
             oude = "clock"
             driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/clock.html")
-        elif(oude == ""):
-            oude = "oude"
-            driver.get('file:///opt/mycroft/skills/X-man-homescreen-css/hmm.html')
+        # elif(oude == ""):
+        #     oude = "oude"
+        #     driver.get('file:///opt/mycroft/skills/X-man-homescreen-css/hmm.html')
+            
+            
+while True:
+    oude = ''
+    with open('/tmp/.homescreenskilldata/page.txt') as f:
+        file = f.read()
