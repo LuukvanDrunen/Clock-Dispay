@@ -34,5 +34,6 @@ while True:
         if(file == "clock" and oude != "clock"):
             oude = "clock"
             driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/clock.html")
-        else:
+        elif(oude == ""):
+            oude = "oude"
             driver.get('file:///opt/mycroft/skills/X-man-homescreen-css/hmm.html')
