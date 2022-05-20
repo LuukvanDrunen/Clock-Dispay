@@ -26,7 +26,7 @@ class ClockForSchoolDieWantIi(MycroftSkill):
         #Verteld de gebruiker na het activeren van clock command dat de klok op gaat starten
         self.speak_dialog('ii.want.die.school.for.clock')
 
-        with open('/opt/page.txt', 'w') as f:
+        with open('/tmp/.homescreenskilldata/page.txt', 'w') as f:
             f.write('clock')
         
         
